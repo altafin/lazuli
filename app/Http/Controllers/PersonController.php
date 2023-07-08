@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ClientController extends Controller
+class PersonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('client.create');
+        return view('person.create');
     }
 
     /**

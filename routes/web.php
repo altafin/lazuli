@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\{
     ProfileController
-    , ClientController
+    , PersonController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +28,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('clients', ClientController::class);
+Route::resource('person', PersonController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
